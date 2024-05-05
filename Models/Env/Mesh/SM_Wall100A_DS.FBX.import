@@ -1,0 +1,63 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dtv5qooa85481"
+path="res://.godot/imported/SM_Wall100A_DS.FBX-95f1345c4e293d4e3c9f6532d8376245.scn"
+
+[deps]
+
+source_file="res://Models/Env/Mesh/SM_Wall100A_DS.FBX"
+dest_files=["res://.godot/imported/SM_Wall100A_DS.FBX-95f1345c4e293d4e3c9f6532d8376245.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+import_script/path=""
+_subresources={
+"materials": {
+"M_Wallpaper": {
+"use_external/enabled": true,
+"use_external/path": "res://Models/Env/Materials/Wallpaper.tres"
+}
+},
+"meshes": {
+"Root Scene_SM_Wall100A_DS": {
+"generate/lightmap_uv": 0,
+"generate/lods": 1,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": ""
+}
+},
+"nodes": {
+"PATH:AnimationPlayer": {
+"import/skip_import": true
+},
+"PATH:RootNode/SM_Wall100A_DS": {
+"generate/occluder": 1,
+"generate/physics": true,
+"physics/shape_type": 1
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

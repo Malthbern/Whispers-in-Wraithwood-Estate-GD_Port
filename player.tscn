@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3ohwppef3i8f"]
+
+[ext_resource type="Script" path="res://Scripts/Player/PlayerController.gd" id="1_p5krx"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ugx78"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ebs8h"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x8i4m"]
+
+[node name="Player" type="CharacterBody3D"]
+collision_layer = 3
+collision_mask = 3
+floor_constant_speed = true
+platform_floor_layers = 4278190083
+platform_wall_layers = 3
+script = ExtResource("1_p5krx")
+
+[node name="Camera Holder" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.57062, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Camera Holder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.109144)
+current = true
+
+[node name="AudioListener3D" type="AudioListener3D" parent="Camera Holder/Camera3D"]
+current = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_ugx78")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+layers = 4
+cast_shadow = 0
+ignore_occlusion_culling = true
+gi_mode = 0
+mesh = SubResource("CapsuleMesh_ebs8h")
+surface_material_override/0 = SubResource("StandardMaterial3D_x8i4m")

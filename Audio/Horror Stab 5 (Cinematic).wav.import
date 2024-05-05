@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b6raocni10r2c"
+path="res://.godot/imported/Horror Stab 5 (Cinematic).wav-d021b49e6e7f7d26434561ee4f37540c.sample"
+
+[deps]
+
+source_file="res://Audio/Horror Stab 5 (Cinematic).wav"
+dest_files=["res://.godot/imported/Horror Stab 5 (Cinematic).wav-d021b49e6e7f7d26434561ee4f37540c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

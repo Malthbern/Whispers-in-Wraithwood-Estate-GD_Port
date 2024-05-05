@@ -1,0 +1,133 @@
+[gd_scene load_steps=8 format=3 uid="uid://d3sxe5c0dicku"]
+
+[ext_resource type="AudioStream" uid="uid://bmk6rtxkv87sn" path="res://Audio/PauseMenu.wav" id="1_0rv2b"]
+[ext_resource type="Script" path="res://Scripts/PMenu/PauseMenuController.gd" id="1_b3la6"]
+[ext_resource type="Texture2D" uid="uid://ttnc4ymrd8ju" path="res://UI/UI_Circle_Faded.png" id="1_ywwke"]
+[ext_resource type="Texture2D" uid="uid://clgo4fldq7uwp" path="res://UI/Paused.png" id="2_evbtm"]
+[ext_resource type="Texture2D" uid="uid://2bi674fyl3l1" path="res://UI/Resume.png" id="3_eimi1"]
+[ext_resource type="Texture2D" uid="uid://bf2iey67u5pmr" path="res://UI/UI - Settings.png" id="5_j8ig0"]
+[ext_resource type="Texture2D" uid="uid://ehbs4qcq7apl" path="res://UI/Quit.png" id="6_7tvwt"]
+
+[node name="InGameUi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_b3la6")
+
+[node name="OpenMenuSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_0rv2b")
+bus = &"Menu"
+
+[node name="Pause" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Panel" parent="Pause"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PauseMain" type="Control" parent="Pause"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Paused" type="TextureRect" parent="Pause/PauseMain"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.296
+anchor_bottom = 0.308
+offset_right = 5126.7
+offset_bottom = 2997.36
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_evbtm")
+expand_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Pause/PauseMain"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.535
+anchor_right = 0.258
+anchor_bottom = 1.0
+offset_top = 0.199951
+offset_right = -0.360046
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pause/PauseMain/MarginContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="Resume" type="Button" parent="Pause/PauseMain/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(78, 78)
+layout_mode = 2
+size_flags_vertical = 3
+action_mode = 0
+keep_pressed_outside = true
+icon = ExtResource("3_eimi1")
+flat = true
+expand_icon = true
+
+[node name="Option" type="Button" parent="Pause/PauseMain/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(78, 78)
+layout_mode = 2
+size_flags_vertical = 3
+action_mode = 0
+keep_pressed_outside = true
+icon = ExtResource("5_j8ig0")
+flat = true
+expand_icon = true
+
+[node name="Quit" type="Button" parent="Pause/PauseMain/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(78, 78)
+layout_mode = 2
+size_flags_vertical = 3
+action_mode = 0
+keep_pressed_outside = true
+icon = ExtResource("6_7tvwt")
+flat = true
+expand_icon = true
+
+[node name="PickupDot" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PickupDotTex" type="TextureRect" parent="PickupDot"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 6.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_ywwke")
+expand_mode = 2
+
+[connection signal="pressed" from="Pause/PauseMain/MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Pause/PauseMain/MarginContainer/VBoxContainer/Option" to="." method="_on_option_pressed"]
+[connection signal="pressed" from="Pause/PauseMain/MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bd5eu1h8n0lul"
+path="res://.godot/imported/BodyFound Condensed.wav-9c9e7d5d3bbadab4451aa90353437093.sample"
+
+[deps]
+
+source_file="res://Audio/BodyFound Condensed.wav"
+dest_files=["res://.godot/imported/BodyFound Condensed.wav-9c9e7d5d3bbadab4451aa90353437093.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

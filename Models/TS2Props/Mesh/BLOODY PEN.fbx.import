@@ -1,0 +1,58 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://c8sg1selh1cfn"
+path="res://.godot/imported/BLOODY PEN.fbx-5ce64a2b55b8930504b8b5f057793f74.scn"
+
+[deps]
+
+source_file="res://Models/TS2Props/Mesh/BLOODY PEN.fbx"
+dest_files=["res://.godot/imported/BLOODY PEN.fbx-5ce64a2b55b8930504b8b5f057793f74.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+import_script/path=""
+_subresources={
+"materials": {
+"01 - Default": {
+"use_external/enabled": true,
+"use_external/path": "res://Models/TS2Props/Mats/BloodPen/01 - Default.tres"
+},
+"02 - Default": {
+"use_external/enabled": true,
+"use_external/path": "res://Models/TS2Props/Mats/BloodPen/02 - Default.tres"
+},
+"03 - Default": {
+"use_external/enabled": true,
+"use_external/path": "res://Models/TS2Props/Mats/BloodPen/03 - Default.tres"
+},
+"07 - Default": {
+"use_external/enabled": true,
+"use_external/path": "res://Models/TS2Props/Mats/BloodPen/07 - Default.tres"
+}
+},
+"nodes": {
+"PATH:AnimationPlayer": {
+"import/skip_import": true
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1
